@@ -3,7 +3,6 @@ package qiyan.ride.locationservice;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import qiyan.ride.locationservice.Driver;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,6 +22,7 @@ public class DriverController {
 
         long id = counter.incrementAndGet();
         driver.setId(id);
+
         drivers.put(String.valueOf(id), driver);
         return new ResponseEntity<>(driver, HttpStatus.CREATED);
     }

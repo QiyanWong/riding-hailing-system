@@ -95,6 +95,7 @@ public class GeoHashUtils {
         for (int i = 0; i < geohash.length(); i++) {
             final int cd = DECODE_MAP.get(Character.valueOf(
                     geohash.charAt(i))).intValue();
+
             for (int mask : BITS) {
                 if (isEven) {
                     if ((cd & mask) != 0) {

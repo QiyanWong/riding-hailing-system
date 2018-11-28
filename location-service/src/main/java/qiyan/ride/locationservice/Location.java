@@ -8,8 +8,7 @@ public class Location {
 
     private double latitude;
     private double longitude;
-    private long id;
-    private LocalDateTime timestamp;
+
     @JsonProperty
     public long getId() {
         return id;
@@ -23,10 +22,14 @@ public class Location {
         this.timestamp = timestamp;
     }
 
+    private long id;
+
     @JsonProperty
     public LocalDateTime getTimestamp() {
         return timestamp;
     }
+
+    private LocalDateTime timestamp;
 
     public Location() {
     }
@@ -58,6 +61,7 @@ public class Location {
 
         this.longitude = longitude;
     }
+
     @JsonProperty
     public String getGeohash() {
         return GeoHashUtils.encode(latitude, longitude);
